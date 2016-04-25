@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace RandomNameGenerator {
     class Program {
-        static void Main(string[] args) {
+        static void Main(string[] args)
+        {
+            MakePeople program = new MakePeople();
         }
     }
 }
