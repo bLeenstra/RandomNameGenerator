@@ -7,9 +7,11 @@ using System.Threading.Tasks;
 namespace RandomNameGenerator {
     public class MakePeople {
         private List<Person> _people = new List<Person>();
-
-        public MakePeople() {
+        private Random rng = new Random();
+        public MakePeople(Gender gender) {
             GeneratePeople();
+            int value = rng.Next(5162);
+
         }
 
         public void GeneratePeople() {
