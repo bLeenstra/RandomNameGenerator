@@ -5,6 +5,6 @@ namespace RandomNameGenerator
     public class Login
     {
         public string Username;
-        public SecureString Password;
+        public string Password;
     }
 }

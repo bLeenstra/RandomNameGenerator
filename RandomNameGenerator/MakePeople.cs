@@ -6,15 +6,20 @@ using System.Threading.Tasks;
 
 namespace RandomNameGenerator {
     public class MakePeople {
-        private List<Person> _people = new List<Person>();
+        private readonly List<Person> _people = new List<Person>();
         private Random rng = new Random();
-        public MakePeople(Gender gender) {
+        private const int NumPeople = 5162;
+        public MakePeople() {
             GeneratePeople();
-            int value = rng.Next(5162);
-
         }
 
-        public void GeneratePeople() {
+        public Person GetRandomPerson(Gender gender)
+        {
+            int value = rng.Next(NumPeople);
+            return _people[value];
+        }
+
+        private void GeneratePeople() {
             _people.Add(new Person { Sex = Gender.Neutral, Name = "AARON" });
             _people.Add(new Person { Sex = Gender.Female, Name = "ABBEY" });
             _people.Add(new Person { Sex = Gender.Female, Name = "ABBIE" });
